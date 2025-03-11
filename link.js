@@ -106,3 +106,32 @@ console.log(listOfNumbers[2 -2]);
 
 // day1.wolf = false;
 // console.log(day1.wolf);
+let anObject = {left: 1, right: 2};
+console.log(anObject.left);
+
+delete anObject.left;
+
+console.log(anObject.left);
+
+console.log("left" in anObject);
+
+console.log("right" in anObject);
+
+console.log(Object.keys({a:1, b:2, c:3}));
+
+let objectA = {d:4, e:5, f:6};
+Object.assign(objectA, {e:7, g:8});
+
+console.log(objectA);
+
+let object1 = {value:10};
+
+let object2 = object1;
+
+let object3 = {value:14};
+
+console.log(object1 === object2);
+
+object1.value = 15;
+
+console.log(object2.value);
