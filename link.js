@@ -135,3 +135,49 @@ console.log(object1 === object2);
 object1.value = 15;
 
 console.log(object2.value);
+
+// rest parameter
+// function max(...numbers) {
+//     let result = -Infinity;
+//     for (let number of numbers) {
+//         if (number > result) result = number;
+//     }
+//     return result;
+// }
+// console.log(max(4,10,9,-2));
+
+// use three-dot notation to call a function with an array of arguments
+
+// let numbers = [3, 9, 8];
+// console.log(max(...numbers));
+
+// Square bracket array notation similarly allows the triple-dot operator
+// let words = ["never", "fully"];
+// console.log(["will", ...words, "understand"]);
+
+// curly brace objects
+// let coordinates = {x: 10, y: 5};
+// console.log({...coordinates, y: 6, z: 3});
+
+
+// Math can help. It contains cos (cosine), sin (sine), and tan (tangent)
+// function randomPointOnCircle(radius){
+//     let angle = Math.random() * 2 * Math.PI;
+//     return  {x:radius * Math.cos(angle),
+//             y:radius * Math.sin(angle)};
+// }
+// console.log(randomPointOnCircle(2));
+
+
+
+// Math.random function returns a new pseudorandom number between 0 (inclusive) and 1 (exclusive) every time you call it
+// console.log(Math.random());
+// console.log(Math.random());
+// console.log(Math.random());
+
+
+// whole random number instead of a fractional one, we use Math.floor (which rounds down to the nearest whole number)
+
+console.log(Math.floor(Math.random() * 100));
+console.log(Math.floor(Math.random() * 10));
+console.log(Math.floor(Math.random() * 10));
