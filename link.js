@@ -181,3 +181,62 @@ console.log(object2.value);
 console.log(Math.floor(Math.random() * 100));
 console.log(Math.floor(Math.random() * 10));
 console.log(Math.floor(Math.random() * 10));
+
+// The sum of a range
+// modify your range function to take an optional third argument that indicates the “step” value used when building the array
+function range(start, end, step = 1) {
+    let result = [];
+    if (step > 0) {
+      for (let i = start; i <= end; i += step) {
+        result.push(i);
+      }
+    } else {
+      for (let i = start; i >= end; i += step) {
+        result.push(i);
+      }
+    }
+    return result;
+  }
+  
+  function sum(numbers) {
+    let total = 0;
+    for (let number of numbers) {
+      total += number;
+    }
+    return total;
+  }
+  
+  console.log(sum(range(1, 10))); // Output: 55
+  console.log(range(1, 10, 2)); // Output: [1, 3, 5, 7, 9]
+  console.log(range(5, 2, -1)); // Output: [5, 4, 3, 2]
+  console.log(range(5,5,1)) //output: [5]
+  console.log(range(5,5,-1)) //output: [5]
+  console.log(range(1,10)) //output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  console.log(range(10,1,-2))//output: [10, 8, 6, 4, 2]
+  
+  
+  // Reversing an array
+  // first, reverseArray, takes an array as its argument and produce a new array that has the same elements in the inverse order.
+  function reverseArray(array) {
+    let reversed = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+      reversed.push(array[i]);
+    }
+    return reversed;
+  }
+  // second, reverseArrayInPlace, does what the reverse method does: modify the array given as its argument by reversing its element
+  function reverseArrayInPlace(array) {
+    for (let i = 0; i < Math.floor(array.length / 2); i++) {
+      let temp = array[i];
+      array[i] = array[array.length - 1 - i];
+      array[array.length - 1 - i] = temp;
+    }
+  }
+  
+  let myArray = ["A", "B", "C"];
+  console.log(reverseArray(myArray)); // → ["C", "B", "A"]
+  console.log(myArray); // → ["A", "B", "C"]
+  
+  let arrayValue = [1, 2, 3, 4, 5];
+  reverseArrayInPlace(arrayValue);
+  console.log(arrayValue); // → [5, 4, 3, 2, 1]
